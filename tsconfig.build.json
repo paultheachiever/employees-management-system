@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist"
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "drizzle.config.ts",
+    "drizzle.config.js",
+    "scripts",
+    "**/*.test.ts",
+    "**/*.spec.ts"
+  ]
+}
