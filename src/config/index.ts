@@ -7,9 +7,11 @@ const configSchema = z.object({
   db_password: z.string().default('postgres'),
   db_host: z.string().default('localhost'),
   db_port: z.number().default(5432),
-  database_url: z
+  DATABASE_URL: z
     .string()
-    .default('postgresql://postgres:postgres@localhost:5432/employee_db'),
+    .default(
+      'postgresql://postgres:postgres@localhost:5432/employee_db_developement',
+    ),
 });
 
 export type Config = z.infer<typeof configSchema>;
